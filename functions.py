@@ -6,7 +6,7 @@ class PolynomialFunc:
         result = 0
 
         for degree, coefficient in enumerate(self.coefficients):
-            result += coefficient * x ** degree
+            result += coefficient * x ** (degree+1)
         
         return result
     
@@ -17,7 +17,7 @@ class PolynomialFunc:
         coefficients = []
 
         for degree, coefficient in enumerate(self.coefficients):
-            coefficients.append(degree*coefficient)
+            coefficients.append((degree+1)*coefficient)
 
         del coefficients[0]
 
