@@ -3,7 +3,7 @@ import tkinter.ttk as ttk
 import matplotlib.pyplot as plt
 from typing import Dict
 
-from functions import PolynomialFunc
+from PolynomialFunc import PolynomialFunc
 
 class Window:
     def __init__(self):
@@ -160,6 +160,7 @@ class Window:
 
         for i in range(step):
             try:
+                print(f"x{i} = {x}")
                 y = func.substitute(x)
                 stepXPoints.append(x)
                 stepYPoints.append(y)
@@ -205,6 +206,7 @@ class Window:
                 stepXPoints.append(x)
                 stepYPoints.append(y)
                 x = x - dfunc.substitute(x)/ddfunc.substitute(x)
+                print(f"x{i} = {x}")
             except:
                 break
 
